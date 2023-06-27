@@ -1,0 +1,24 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    @mixin atMedium {
+        display: flex;
+        flex-direction: row;
+        max-width: 1400px;
+    }
+    &__4 {
+        @mixin atMedium {
+            flex: 1;
+            padding-left: 2rem;
+        }
+    }
+
+    &__8 {
+        padding-top: 1rem;
+        @mixin atMedium {
+            flex: 2;
+            padding-left: 2rem;
+        }
+    }
+
+}
