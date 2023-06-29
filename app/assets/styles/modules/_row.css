@@ -1,7 +1,23 @@
 .row {
     display: flex;
     flex-direction: column;
+    
+    &--gutters {
+        margin-right: -65px;
+    }
 
+    &--gutters > div {
+        padding-right: 65px;
+    }
+
+    &--gutters-large {
+        margin-right: -120px;
+    }
+
+    &--gutters-large > div {
+        margin-right: 120px;
+    }
+    
     &--b-margin-until-medium {
         margin-bottom: 1rem;
     }
@@ -28,4 +44,7 @@
         }
     }
 
+    &__6 {
+        flex: 1;
+    }
 }
