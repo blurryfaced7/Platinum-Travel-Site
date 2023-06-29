@@ -48,6 +48,30 @@
         flex: 6;
     }
 
+    @mixin atMedium {
+        &--b-margin-until-medium {
+            margin-bottom: 0;
+        }
+    }
+    &__medium-4 {
+        @mixin atMedium {
+            flex-direction: row;
+            flex: 4;
+            padding-left: 2rem;
+        }
+    }
+
+    &__medium-8 {
+        @mixin atMedium {
+            flex: 8;
+            padding-left: 2.5rem;
+        }
+    }
+
+    &__medium-6 {
+        flex: 6;
+    }
+
 
     @mixin atLarge {
         display: flex;
