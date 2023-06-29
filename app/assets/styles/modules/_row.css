@@ -1,6 +1,9 @@
 .row {
     display: flex;
     flex-direction: column;
+    &--t-padding {
+        padding-top: 80px;
+    }
     
     &--gutters {
         margin-right: -65px;
@@ -17,34 +20,68 @@
     &--gutters-large > div {
         margin-right: 120px;
     }
-    
-    &--b-margin-until-medium {
+
+    &--b-margin-until-large {
         margin-bottom: 1rem;
     }
 
-    @mixin atMedium {
-        display: flex;
-        flex-direction: row;
-        max-width: 1400px;
-        &--b-margin-until-medium {
+    @mixin atLarge {
+        &--b-margin-until-large {
             margin-bottom: 0;
         }
     }
-    &__4 {
-        @mixin atMedium {
-            flex: 1;
+    &__large-4 {
+        @mixin atLarge {
+            flex: 4;
             padding-left: 2rem;
         }
     }
 
-    &__8 {
-        @mixin atMedium {
-            flex: 2;
+    &__large-8 {
+        @mixin atLarge {
+            flex: 8;
             padding-left: 2.5rem;
         }
     }
 
-    &__6 {
-        flex: 1;
+    &__large-6 {
+        flex: 6;
+    }
+
+
+    @mixin atLarge {
+        display: flex;
+        flex-direction: row;
+        max-width: 1400px;
+        &--b-margin-until-large {
+            margin-bottom: 0;
+        }
+    }
+    &__large-4 {
+        @mixin atLarge {
+            flex: 4;
+            padding-left: 2rem;
+        }
+    }
+
+    &__large-8 {
+        @mixin atLarge {
+            flex: 8;
+            padding-left: 2.5rem;
+        }
+    }
+
+    &__large-6 {
+        flex: 6;
+    }
+    /* Ijil undurtei blockuudin style */
+
+    &--equal-height-at-large {
+        @mixin atLarge {
+            display: flex;
+        }
+        & > div {
+            display: flex;
+        }
     }
 }
